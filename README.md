@@ -16,3 +16,6 @@ Built with:
 * redux 4.0.5
 * connected-react-router 6.8.0
 
+Styled with:
+* antd 4.4.2 (Ant design)
+
