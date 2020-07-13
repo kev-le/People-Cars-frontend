@@ -4,11 +4,10 @@ import { connect } from 'react-redux'
 import { push, goBack } from 'connected-react-router'
 import { getPeople, addPerson, deletePerson, editPerson } from '../../actions/people'
 import { addCar, deleteCar, editCar } from '../../actions/car'
-import { Button, Card, Popconfirm, message, Select } from 'antd';
+import { Button, Card, Popconfirm, message } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import PersonModal from '../../components/personModal'
 import CarModal from '../../components/carModal'
-
 
 class HomePage extends Component {
 
@@ -133,29 +132,29 @@ class HomePage extends Component {
                         </Popconfirm>
                       </div>}
           >
-              {person.cars.length > 0 ? (
-                person.cars.map((car, key) => {
-                  return (
-                    <Card type="inner"
-                          title={car.year + " " + car.make + " " + car.model}
-                          extra={<div>
-                                  <Button onClick={() => this.handleCarEdit(car)}>Edit</Button>
-                                  <Popconfirm
-                                    title="Are you sure you want to delete this car?"
-                                    onConfirm={() => this.handleCarDelete(car.id)}
-                                    okText="Yes"
-                                    cancelText="No"
-                                  >
-                                    <Button>Delete</Button>
-                                  </Popconfirm>
-                                </div>}
-                          key={key}
-                    >
-                      {car.price}
-                    </Card>
-                  )
-                })
-              ) : <p>No Cars</p>}
+            {person.cars.length > 0 ? (
+              person.cars.map((car, key) => {
+                return (
+                  <Card key={key}
+                        type="inner"
+                        title={car.year + " " + car.make + " " + car.model}
+                        extra={<div>
+                                <Button onClick={() => this.handleCarEdit(car)}>Edit</Button>
+                                <Popconfirm
+                                  title="Are you sure you want to delete this car?"
+                                  onConfirm={() => this.handleCarDelete(car.id)}
+                                  okText="Yes"
+                                  cancelText="No"
+                                >
+                                  <Button>Delete</Button>
+                                </Popconfirm>
+                              </div>}
+                  >
+                    {car.price}
+                  </Card>
+                )
+              })
+            ) : <p>No Cars</p>}
           </Card>
           )
         })}
