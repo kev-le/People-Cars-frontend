@@ -2,7 +2,11 @@
 
 ### Installation steps:
 1. run `npm install`
-2. run `npm start --port 3001`
+2. run `npm start`
+
+The React web application is running on port `3001`
+
+View the application at `http://localhost:3001`
 
 Built with:
 * react 16.13
