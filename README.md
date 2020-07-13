@@ -1,6 +1,8 @@
-## Basic React Redux Template
+# People and Cars Frontend
 
-Used to quickly build React-redux apps with API functionality
+### Installation steps:
+1. run `npm install`
+2. run `npm start -port 3001`
 
 Built with:
 * react 16.13
