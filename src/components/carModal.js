@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { Button, Modal, Input, Form, Select  } from 'antd';
+import { Button, Modal, Input, InputNumber, Form, Select  } from 'antd';
 
 
 const layout = {
@@ -46,9 +46,9 @@ class CarModal extends Component {
             <Form.Item
               label="Year"
               name="year"
-              rules={[{ required: true, message: 'Please input a year!' }]}
+              rules={[{ type: 'number', required: true, message: 'Please input a year!' }]}
             >
-              <Input />
+              <InputNumber />
             </Form.Item>
 
             <Form.Item
