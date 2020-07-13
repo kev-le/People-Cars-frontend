@@ -2,7 +2,7 @@
 
 ### Installation steps:
 1. run `npm install`
-2. run `npm start -port 3001`
+2. run `npm start --port 3001`
 
 Built with:
 * react 16.13
