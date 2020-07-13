@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Route } from 'react-router'
 import HomePage from '../HomePage'
 import './App.css';
+import 'antd/dist/antd.css';
 
 class App extends Component {
 
